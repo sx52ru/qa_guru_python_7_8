@@ -2,6 +2,7 @@
 Протестируйте классы из модуля homework/models.py
 """
 import pytest
+import unittest
 
 from homework.models import Product
 
@@ -19,16 +20,23 @@ class TestProducts:
 
     def test_product_check_quantity(self, product):
         # TODO напишите проверки на метод check_quantity
-        pass
+        assert product.check_quantity(product.quantity), f"Количество продукта {product.name} проходит проверку"
+        # Непонятно почему именно проверки, а не одна проверка? Какие еще тут могут быть проверки?
+
 
     def test_product_buy(self, product):
         # TODO напишите проверки на метод buy
-        pass
+        assert product.buy(product.quantity), f"Продукт {product.name} можно купить"
+        # Аналогично.
 
     def test_product_buy_more_than_available(self, product):
         # TODO напишите проверки на метод buy,
         #  которые ожидают ошибку ValueError при попытке купить больше, чем есть в наличии
         pass
+        # with self.assertRaises(ValueError):
+        #     assert product.buy(product.quantity), f"Продукт {product.name} можно купить"
+        # Тут вообще непонятно что нужно сделать ((
+
 
 
 class TestCart:
