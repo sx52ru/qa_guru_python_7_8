@@ -33,9 +33,8 @@ class TestProducts:
         # TODO напишите проверки на метод buy,
         #  которые ожидают ошибку ValueError при попытке купить больше, чем есть в наличии
         pass
-        # with self.assertRaises(ValueError):
-        #     assert product.buy(product.quantity), f"Продукт {product.name} можно купить"
-        # Тут вообще непонятно что нужно сделать ((
+        # А вот тут вообще непонятно что нужно сделать (((
+        #
 
 
 
